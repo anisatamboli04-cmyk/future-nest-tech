@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Future Nest Tech - We build modern, responsive and SEO-friendly websites for businesses.">
+
+    <title>Future Nest Tech</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+<nav aria-label="Main Navigation">
+    <h2>Future Nest Tech</h2>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- ================= HERO ================= -->
+<header class="hero" id="home" data-aos="fade-up">
+    <h1>Build, Fix & Grow Your Website</h1>
+    <p>We create modern, fast and SEO-friendly websites for businesses</p>
+    
+    <a href="#contact">
+        <button>Get Started</button>
+    </a>
+</header>
+
+<!-- ================= WHY US ================= -->
+<section class="why-us" id="why" data-aos="fade-up">
+    <h2>Why Choose Us</h2>
+
+    <div class="why-box">
+        <div class="why-card" data-aos="fade-up">
+            <h3>Fast Delivery</h3>
+            <p>We deliver projects quickly without compromising quality.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>Affordable Pricing</h3>
+            <p>Get high-quality websites at budget-friendly prices.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>Modern Design</h3>
+            <p>We create clean and user-friendly designs.</p>
+        </div>
+
+        <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>Ongoing Support</h3>
+            <p>We help you even after your website is completed.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= SERVICES ================= -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-box">
+        <div class="card" data-aos="zoom-in">
+            <h3>Website Development</h3>
+            <p>We build modern and responsive websites.</p>
+        </div>
+
+        <div class="card" data-aos="zoom-in" data-aos-delay="100">
+            <h3>Bug Fixing</h3>
+            <p>Fix errors and issues quickly and efficiently.</p>
+        </div>
+
+        <div class="card" data-aos="zoom-in" data-aos-delay="200">
+            <h3>Website Maintenance</h3>
+            <p>Keep your website updated and running smoothly.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= PORTFOLIO ================= -->
+<section class="portfolio" id="portfolio">
+    <h2>Our Work</h2>
+
+    <div class="portfolio-box">
+        <div class="project" data-aos="fade-up">
+            <h3>Business Website</h3>
+            <p>Modern responsive website for a local business.</p>
+        </div>
+
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+            <h3>E-commerce Store</h3>
+            <p>Online store with payment integration.</p>
+        </div>
+
+        <div class="project" data-aos="fade-up" data-aos-delay="200">
+            <h3>Portfolio Website</h3>
+            <p>Personal portfolio for a developer.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= TEAM ================= -->
+<section class="team" id="team" data-aos="fade-up">
+    <h2>Our Team</h2>
+
+    <p class="team-intro">
+        We are a passionate team of developers with 2+ years of experience,
+        focused on building modern, high-quality websites for businesses.
+    </p>
+
+    <div class="team-box">
+        <div class="team-card" data-aos="flip-left">
+            <h3>Founder & Developer</h3>
+            <p>3+ years experience in web development.</p>
+        </div>
+
+        <div class="team-card" data-aos="flip-left" data-aos-delay="100">
+            <h3>Frontend Developer</h3>
+            <p>Expert in responsive UI and modern design.</p>
+        </div>
+
+        <div class="team-card" data-aos="flip-left" data-aos-delay="200">
+            <h3>Junior Developer</h3>
+            <p>Passionate learner contributing to development.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ================= CONTACT ================= -->
+<section class="contact" id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+
+ <form id="contact-form">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+
+    <input type="text" name="_gotcha" style="display:none">
+
+    <button type="button" id="submit-btn">Send Message</button>
+
+</form>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+    <p>© 2026 Future Nest Tech | All Rights Reserved</p>
+</footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+AOS.init();
+</script>
+
+<script>
+window.onload = function () {
+
+    const form = document.getElementById("contact-form");
+    const button = document.getElementById("submit-btn");
+
+    console.log("JS Loaded"); // test
+
+    button.onclick = function () {
+
+        console.log("Button clicked"); // test
+
+        fetch("https://formspree.io/f/mpqkpdgb", {
+            method: "POST",
+            body: new FormData(form),
+            headers: {
+                "Accept": "application/json"
+            }
+        })
+        .then(function () {
+            window.location.href = "thankyou.html";
+        })
+        .catch(function () {
+            alert("Error sending message");
+        });
+
+    };
+
+};
+</script>
+
+</body>
+</html>

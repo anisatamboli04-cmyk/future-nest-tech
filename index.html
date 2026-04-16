@@ -12,16 +12,34 @@
 <!-- Font -->
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 
-<!-- ✅ FIX 1: Link to external stylesheet (was missing before) -->
-<link rel="stylesheet" href="style.css">
+<style>
+body {
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+}
 
-<!-- ✅ FIX 2: Removed duplicate inline <style> block — style.css now handles everything -->
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a);
+    color: white;
+}
+
+/* CARD */
+.card {
+    border: none;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.card:hover {
+    transform: translateY(-8px);
+}
+</style>
 
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- ✅ NAVBAR (ONLY THIS, NO OLD NAV) -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
   <div class="container-fluid">
 
@@ -36,7 +54,6 @@
         <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
         <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-        <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
         <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -55,120 +72,120 @@
 
 <!-- SERVICES -->
 <section class="py-5 text-center" id="services">
-  <div class="container">
-    <h2 class="mb-4">Our Services</h2>
-    <div class="row g-4">
+<div class="container">
+<h2 class="mb-4">Our Services</h2>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Website Development</h5>
-          <p>Modern responsive websites</p>
-        </div>
-      </div>
+<div class="row g-4">
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Bug Fixing</h5>
-          <p>Fix issues quickly</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Website Development</h5>
+<p>Modern responsive websites</p>
+</div>
+</div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Maintenance</h5>
-          <p>Keep your site smooth</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Bug Fixing</h5>
+<p>Fix issues quickly</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Maintenance</h5>
+<p>Keep your site smooth</p>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- PORTFOLIO -->
 <section class="bg-light py-5 text-center" id="portfolio">
-  <div class="container">
-    <h2 class="mb-4">Our Work</h2>
-    <div class="row g-4">
+<div class="container">
+<h2 class="mb-4">Our Work</h2>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Business Website</h5>
-          <p>Responsive business site</p>
-        </div>
-      </div>
+<div class="row g-4">
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>E-commerce</h5>
-          <p>Online store setup</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Business Website</h5>
+<p>Responsive business site</p>
+</div>
+</div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Portfolio</h5>
-          <p>Developer portfolio</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>E-commerce</h5>
+<p>Online store setup</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Portfolio</h5>
+<p>Developer portfolio</p>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
-<!-- TEAM — ✅ FIX 3: Added id="team" so navbar link works -->
-<section class="py-5 text-center" id="team">
-  <div class="container">
-    <h2 class="mb-4">Our Team</h2>
-    <div class="row g-4">
+<!-- TEAM -->
+<section class="py-5 text-center">
+<div class="container">
+<h2 class="mb-4">Our Team</h2>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Founder</h5>
-          <p>3+ years experience</p>
-        </div>
-      </div>
+<div class="row g-4">
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Frontend Dev</h5>
-          <p>UI & Design expert</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Founder</h5>
+<p>3+ years experience</p>
+</div>
+</div>
 
-      <div class="col-12 col-md-6 col-lg-4">
-        <div class="card p-3 shadow h-100">
-          <h5>Junior Dev</h5>
-          <p>Growing developer</p>
-        </div>
-      </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Frontend Dev</h5>
+<p>UI & Design expert</p>
+</div>
+</div>
 
-    </div>
-  </div>
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card p-3 shadow h-100">
+<h5>Junior Dev</h5>
+<p>Growing developer</p>
+</div>
+</div>
+
+</div>
+</div>
 </section>
 
 <!-- CONTACT -->
 <section class="bg-light py-5 text-center" id="contact">
-  <div class="container">
-    <h2 class="mb-4">Contact Us</h2>
+<div class="container">
+<h2 class="mb-4">Contact Us</h2>
 
-    <form id="contact-form" action="https://formspree.io/f/mpqkpdgb" method="POST" class="mx-auto" style="max-width:500px;">
+<form id="contact-form" action="https://formspree.io/f/mpqkpdgb" method="POST" class="mx-auto" style="max-width:500px;">
 
-      <input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
-      <input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
-      <textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
+<input type="text" name="name" class="form-control mb-3" placeholder="Your Name" required>
+<input type="email" name="email" class="form-control mb-3" placeholder="Your Email" required>
+<textarea name="message" class="form-control mb-3" rows="4" placeholder="Your Message" required></textarea>
 
-      <!-- ✅ FIX 4: Inline error message instead of alert() -->
-      <div id="form-error" class="alert alert-danger d-none mb-3">Something went wrong. Please try again.</div>
+<button type="submit" class="btn btn-primary w-100">Send Message</button>
 
-      <button type="submit" class="btn btn-primary w-100">Send Message</button>
-
-    </form>
-  </div>
+</form>
+</div>
 </section>
 
 <!-- FOOTER -->
 <footer class="bg-dark text-white text-center p-3">
-  <p>© 2026 Future Nest Tech</p>
+<p>© 2026 Future Nest Tech</p>
 </footer>
 
 <!-- Bootstrap JS -->
@@ -176,29 +193,20 @@
 
 <!-- Form Redirect -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById("contact-form");
-    const errorBox = document.getElementById("form-error");
 
-    form.addEventListener("submit", function (e) {
+    form.addEventListener("submit", function(e) {
         e.preventDefault();
-        errorBox.classList.add("d-none");
 
         fetch(form.action, {
             method: "POST",
             body: new FormData(form),
             headers: { 'Accept': 'application/json' }
-        })
-        .then(function (response) {
-            // ✅ FIX 4 cont: Check response.ok before redirecting
-            if (response.ok) {
-                window.location.href = "thankyou.html";
-            } else {
-                errorBox.classList.remove("d-none");
-            }
-        })
-        .catch(function () {
-            errorBox.classList.remove("d-none");
+        }).then(() => {
+            window.location.href = "thankyou.html";
+        }).catch(() => {
+            alert("Error sending message");
         });
     });
 });

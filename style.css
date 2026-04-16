@@ -1,7 +1,7 @@
 /* ===== GLOBAL ===== */
 body {
     font-family: 'Poppins', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden; /* prevents right-side white space */
 }
 
 /* ===== HERO ===== */
@@ -17,11 +17,8 @@ body {
     transition: all 0.3s ease;
 }
 
-/* ✅ FIX: Only apply hover lift on real pointer devices (not touch screens) */
-@media (hover: hover) {
-    .card:hover {
-        transform: translateY(-8px);
-    }
+.card:hover {
+    transform: translateY(-8px);
 }
 
 /* ===== BUTTON ===== */

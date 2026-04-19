@@ -6,69 +6,198 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  min-height: calc(100vh - 70px);
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #f8fafc;
 }
 
-/* ===== SECTION FIX ===== */
+/* ===== PAGE HERO ===== */
+.page-hero {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+  padding: 80px 0 60px;
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.page-hero p {
+  opacity: 0.85;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===== SECTION ===== */
 section {
   padding: 70px 0;
 }
 
-/* ===== FIX ROW OVERFLOW (IMPORTANT) */
-.row {
-  --bs-gutter-x: 1.5rem;
+/* ===== TITLES ===== */
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #0f172a;
 }
 
-/* ===== CARD FIX (THIS IS KEY) */
+.section-sub {
+  color: #64748b;
+}
+
+/* ===== PROCESS ===== */
+.process-step {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.step-num {
+  width: 40px;
+  height: 40px;
+  background: #1e3a8a;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.step-body h6 {
+  margin-bottom: 4px;
+}
+
+/* ===== BENEFIT CARD ===== */
+.benefit-card {
+  background: #f8fafc;
+  border-radius: 12px;
+  padding: 20px;
+  border-left: 4px solid #1e3a8a;
+}
+
+/* ===== STATS ===== */
+.stats-strip {
+  background: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 40px 0;
+}
+
+.stat-num {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+/* ===== CTA ===== */
+.cta-strip {
+  background: #f1f5f9;
+  text-align: center;
+  padding: 50px 0;
+}
+
+/* ===== 🔥 MAIN CARD (FIXED + TRANSITION) ===== */
 .zcard {
   border-radius: 12px;
-  padding: 24px;
-  background: #fff;
+  padding: 28px 20px;
+  background: #ffffff;
   height: 100%;
   width: 100%;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
 
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* HOVER EFFECT (VISIBLE NOW) */
+/* 🔥 HOVER */
 .zcard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+/* Glow effect */
+.zcard::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: linear-gradient(120deg, rgba(30,58,138,0.15), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.zcard:hover::after {
+  opacity: 1;
 }
 
 /* ICON */
 .zcard-icon {
-  font-size: 32px;
+  font-size: 36px;
   color: #1e3a8a;
   margin-bottom: 12px;
 }
 
 /* TEXT */
 .zcard-title {
-  font-weight: 600;
   font-size: 16px;
+  font-weight: 600;
   color: #0f172a;
 }
 
-/* ===== FIX CONTAINER (REMOVE BREAKING RULE) */
-.container {
-  max-width: 1140px;
+.zcard-sub {
+  font-size: 13px;
+  color: #64748b;
 }
 
-/* ===== IMPORTANT FIX FOR SIDE OVERFLOW */
-.col-lg-6,
-.col-md-6 {
-  overflow: hidden;
+/* ===== FIX GRID (IMPORTANT) ===== */
+.row {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* ===== BACK LINK ===== */
+.back-link {
+  color: #1e3a8a;
+  text-decoration: none;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+/* ===== POPUP ===== */
+.popup-overlay {
+  display: none;
+}
+
+/* ===== THANK YOU ===== */
+.thankyou {
+  min-height: 100vh;
+  background: linear-gradient(135deg,#1e293b,#2563eb);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-box {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  text-align: center;
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 768px) {
   .hero h1 {
+    font-size: 26px;
+  }
+
+  .page-hero h1 {
     font-size: 26px;
   }
 

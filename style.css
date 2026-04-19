@@ -6,10 +6,12 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(135deg, #0f172a, #1e3a8a);
-  color: white;
+  min-height: calc(100vh - 70px);  /* adjust for navbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
-
 /* ===== PAGE HERO ===== */
 .page-hero {
   background: linear-gradient(135deg, #0f172a, #1e3a8a);

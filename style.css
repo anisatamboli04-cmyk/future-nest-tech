@@ -4,6 +4,16 @@ body {
     overflow-x: hidden;
 }
 
+/* Fix Bootstrap flex overflow issue (VERY IMPORTANT) */
+.row > [class*='col-'] {
+    min-width: 0;
+}
+
+/* ===== CONTAINER FIX ===== */
+.container {
+    max-width: 1140px;
+}
+
 /* ===== HERO ===== */
 .hero {
     background: linear-gradient(135deg, #0f172a, #1e3a8a);
@@ -17,16 +27,19 @@ body {
     padding: 70px 0 50px;
     text-align: center;
 }
+
 .page-hero .icon-wrap {
     font-size: 52px;
     margin-bottom: 16px;
     opacity: 0.9;
 }
+
 .page-hero h1 {
     font-size: 36px;
     font-weight: 700;
     margin-bottom: 12px;
 }
+
 .page-hero p {
     font-size: 16px;
     opacity: 0.85;
@@ -41,6 +54,7 @@ body {
     color: #0f172a;
     margin-bottom: 10px;
 }
+
 .section-sub {
     font-size: 15px;
     color: #64748b;
@@ -54,6 +68,7 @@ body {
     align-items: flex-start;
     margin-bottom: 28px;
 }
+
 .step-num {
     width: 44px;
     height: 44px;
@@ -67,12 +82,14 @@ body {
     justify-content: center;
     flex-shrink: 0;
 }
+
 .step-body h6 {
     font-size: 15px;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 4px;
 }
+
 .step-body p {
     font-size: 14px;
     color: #475569;
@@ -80,30 +97,37 @@ body {
     line-height: 1.65;
 }
 
-/* ===== BENEFIT CARDS ===== */
+/* ===== BENEFIT CARDS (FIXED) ===== */
 .benefit-card {
     background: #f8fafc;
     border-radius: 12px;
     padding: 24px 20px;
-    height: 100%;
     border-left: 4px solid #1e3a8a;
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
+
 .benefit-card i {
     font-size: 28px;
     color: #1e3a8a;
     margin-bottom: 12px;
 }
+
 .benefit-card h6 {
     font-size: 15px;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 6px;
 }
+
 .benefit-card p {
     font-size: 13px;
     color: #475569;
     margin: 0;
     line-height: 1.6;
+    word-wrap: break-word;
 }
 
 /* ===== STATS STRIP ===== */
@@ -113,10 +137,12 @@ body {
     padding: 40px 0;
     text-align: center;
 }
+
 .stat-num {
     font-size: 36px;
     font-weight: 700;
 }
+
 .stat-label {
     font-size: 13px;
     opacity: 0.8;
@@ -129,18 +155,20 @@ body {
     padding: 50px 0;
     text-align: center;
 }
+
 .cta-strip h3 {
     font-size: 24px;
     font-weight: 700;
     color: #0f172a;
     margin-bottom: 10px;
 }
+
 .cta-strip p {
     color: #64748b;
     margin-bottom: 24px;
 }
 
-/* ===== FIXED CARDS (MAIN ISSUE SOLVED HERE) ===== */
+/* ===== ZCARDS (SERVICES / TEAM / WORK) ===== */
 .zcard {
     border: none;
     border-radius: 12px;
@@ -154,11 +182,12 @@ body {
     align-items: center;
     justify-content: center;
 
-    height: 100%; /* ensures equal height without breaking */
+    height: 100%;
+    width: 100%;
+
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-/* Hover */
 @media (hover: hover) {
     .zcard:hover {
         transform: translateY(-6px);
@@ -166,20 +195,17 @@ body {
     }
 }
 
-/* Card Content */
 .zcard-icon {
     font-size: 36px;
     color: #1e3a8a;
     margin-bottom: 12px;
-    line-height: 1;
 }
 
 .zcard-title {
     font-size: 16px;
     font-weight: 600;
     color: #0f172a;
-    margin-top: 6px;
-    margin-bottom: 6px;
+    margin: 6px 0;
 }
 
 .zcard-sub {
@@ -188,7 +214,12 @@ body {
     margin: 0;
 }
 
-/* Mobile fix */
+/* ===== ROW ALIGNMENT FIX ===== */
+.row {
+    align-items: stretch;
+}
+
+/* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
     .zcard {
         padding: 24px 16px;
@@ -206,9 +237,11 @@ body {
     justify-content: center;
     padding: 20px;
 }
+
 .popup-overlay.show {
     display: flex;
 }
+
 .popup-box {
     background: #fff;
     border-radius: 16px;
@@ -221,23 +254,25 @@ body {
     transition: transform 0.4s cubic-bezier(.17,.67,.2,1.25), opacity 0.35s ease;
     box-shadow: 0 32px 80px rgba(15,23,42,0.3);
 }
+
 .popup-box.show {
-    transform: scale(1) translateY(0);
+    transform: scale(1);
     opacity: 1;
 }
+
 .popup-icon-wrap {
     font-size: 52px;
     color: #1e3a8a;
     margin-bottom: 16px;
 }
+
 .popup-title {
     font-size: 22px;
     font-weight: 600;
     color: #0f172a;
-    margin-bottom: 8px;
 }
+
 .popup-desc {
     font-size: 14px;
     color: #475569;
-    margin-bottom: 20px;
 }
